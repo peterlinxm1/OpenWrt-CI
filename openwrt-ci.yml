@@ -26,8 +26,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    if: github.event.repository.owner.id == github.event.sender.id
-
     steps:
 
       - name: Checkout
@@ -55,8 +53,6 @@ jobs:
           # ln -s /mnt/openwrt/dl ./dl
           # ln -s /mnt/openwrt/feeds ./feeds
           # ln -s /mnt/openwrt/staging_dir ./staging_dir
-
-          df -h
 
       - name: Update feeds
         run: |
